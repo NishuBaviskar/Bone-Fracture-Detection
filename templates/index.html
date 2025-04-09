@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bone Fracture Detection</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        
+        input[type="file"],
+        input[type="submit"] {
+            margin: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        img {
+            max-width: 80%;
+            border: 2px solid #fff;
+            margin-top: 20px;
+        }
+        
+        h1 {
+            color: #00ffcc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bone Fracture Detection</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <h2>{{ prediction }}</h2>
+    <img src="{{ output_path }}" alt="Predicted Image"> {% endif %}
+</body>
+
+</html>

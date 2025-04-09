@@ -1,0 +1,6 @@
+train: C:/Users/Nishu Baviskar/OneDrive/Desktop/Try Bone Fracture/bone fracture detection.v4-v4.yolov8/train/images
+val: C:/Users/Nishu Baviskar/OneDrive/Desktop/Try Bone Fracture/bone fracture detection.v4-v4.yolov8/valid/images
+
+# class names
+nc: 1
+names: ['Fracture']
